@@ -8,7 +8,7 @@
 JDK 1.8
 SpringBoot 2.7.5
 Java Web Token
-Spring Security 5.6.1
+Spring Security
 Redis
 MySQL 8.0以上
 MyBatis Plus
