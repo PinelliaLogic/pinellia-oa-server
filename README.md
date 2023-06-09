@@ -8,3 +8,6 @@ Redis
 MySQL 8.0以上
 MyBatis Plus
 lombok
+
+前端地址
+https://github.com/PinelliaLogic/pinellia-oa-client
