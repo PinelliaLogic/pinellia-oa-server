@@ -1,0 +1,57 @@
+server:
+  port: 9091
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pinellia-oa?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root7
+
+  redis:
+    #数据库索引
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password:
+    jedis:
+      pool:
+        #最大连接数
+        max-active: 8
+        #最大阻塞等待时间(负数表示没限制)
+        max-wait: -1
+        #最大空闲
+        max-idle: 8
+        #最小空闲
+        min-idle: 0
+        #连接超时时间
+    timeout: 10000
+
+    # 格式化时间
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    # 世界标准时间,为了方式时差,需要+8小时
+    time-zone: GMT+8
+
+  # 关闭spring的banner
+  main:
+    banner-mode: off
+    allow-circular-references: true       # 自动终端循环依赖(SecurityConfig)
+
+
+mybatis-plus:
+  configuration:
+    #开启MP日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #下划线自动转驼峰功能
+    map-underscore-to-camel-case: true
+  global-config:
+    # 关闭mp的banner(横幅)
+    banner: false
+    # 设置表前缀对应数据库中的
+#    db-config:
+#      table-prefix: oa_
+
+# 图片存储路径
+file:
+  path: "D:\\Pinellia-OA\\image"
